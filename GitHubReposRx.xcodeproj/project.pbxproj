@@ -15,6 +15,8 @@
 		9DB6A2ED1EF1596300DF2DA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB6A2EB1EF1596300DF2DA4 /* LaunchScreen.storyboard */; };
 		9DB6A2F81EF1596400DF2DA4 /* GitHubReposRxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB6A2F71EF1596400DF2DA4 /* GitHubReposRxTests.swift */; };
 		9DB6A3031EF1596400DF2DA4 /* GitHubReposRxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB6A3021EF1596400DF2DA4 /* GitHubReposRxUITests.swift */; };
+		9DB6A31D1EF15EB400DF2DA4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB6A31C1EF15EB400DF2DA4 /* API.swift */; };
+		9DB6A3201EF16DA500DF2DA4 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB6A31F1EF16DA500DF2DA4 /* MainVC.swift */; };
 		FE98DEE2ABDBE3AEC96A7B3C /* Pods_GitHubReposRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A80B26C65A9CD5FDED095181 /* Pods_GitHubReposRx.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		9DB6A2FE1EF1596400DF2DA4 /* GitHubReposRxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubReposRxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB6A3021EF1596400DF2DA4 /* GitHubReposRxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReposRxUITests.swift; sourceTree = "<group>"; };
 		9DB6A3041EF1596400DF2DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DB6A31C1EF15EB400DF2DA4 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		9DB6A31F1EF16DA500DF2DA4 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		A80B26C65A9CD5FDED095181 /* Pods_GitHubReposRx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubReposRx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF95A0DC6824C204563F0E0C /* Pods-GitHubReposRxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubReposRxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubReposRxUITests/Pods-GitHubReposRxUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E50E08BD3AA03684E3A8864D /* Pods-GitHubReposRxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubReposRxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubReposRxTests/Pods-GitHubReposRxTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 		9DB6A3111EF1597000DF2DA4 /* NTW */ = {
 			isa = PBXGroup;
 			children = (
+				9DB6A31C1EF15EB400DF2DA4 /* API.swift */,
 			);
 			path = NTW;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 		9DB6A3141EF15A0B00DF2DA4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9DB6A31F1EF16DA500DF2DA4 /* MainVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -303,13 +309,16 @@
 				TargetAttributes = {
 					9DB6A2DE1EF1596300DF2DA4 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 					9DB6A2F21EF1596300DF2DA4 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						TestTargetID = 9DB6A2DE1EF1596300DF2DA4;
 					};
 					9DB6A2FD1EF1596400DF2DA4 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						TestTargetID = 9DB6A2DE1EF1596300DF2DA4;
 					};
 				};
@@ -504,6 +513,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DB6A31D1EF15EB400DF2DA4 /* API.swift in Sources */,
+				9DB6A3201EF16DA500DF2DA4 /* MainVC.swift in Sources */,
 				9DB6A2E31EF1596300DF2DA4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +590,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -605,7 +618,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -634,6 +647,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -654,7 +669,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -667,6 +682,7 @@
 			baseConfigurationReference = 39FE077850F2F4F44E0E54B6 /* Pods-GitHubReposRx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = GitHubReposRx/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.byteorbit.malcolm.GitHubReposRx;
@@ -681,6 +697,7 @@
 			baseConfigurationReference = 17DC4B0D8BD424BAB300FD80 /* Pods-GitHubReposRx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = GitHubReposRx/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.byteorbit.malcolm.GitHubReposRx;
@@ -771,6 +788,7 @@
 				9DB6A3091EF1596400DF2DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9DB6A30A1EF1596400DF2DA4 /* Build configuration list for PBXNativeTarget "GitHubReposRxTests" */ = {
 			isa = XCConfigurationList;
@@ -779,6 +797,7 @@
 				9DB6A30C1EF1596400DF2DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9DB6A30D1EF1596400DF2DA4 /* Build configuration list for PBXNativeTarget "GitHubReposRxUITests" */ = {
 			isa = XCConfigurationList;
@@ -787,6 +806,7 @@
 				9DB6A30F1EF1596400DF2DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
