@@ -6,10 +6,11 @@
 //  Copyright © 2017 ByteOrbit. All rights reserved.
 //
 
-import UIKit
-import RxSwift
-import RxCocoa
 import Moya
+import Moya_ModelMapper
+import UIKit
+import RxCocoa
+import RxSwift
 
 class MainVC: UIViewController {
     
@@ -19,8 +20,8 @@ class MainVC: UIViewController {
     let disposeBag = DisposeBag()
     var provider: RxMoyaProvider<API>!
     var latestReposName: Observable<String> {
-        return searchBar
-            .rx.text
+        return searchBar.rx
+            .text
             .orEmpty
             .debounce(0.5, scheduler: MainScheduler.instance)
             .distinctUntilChanged()
@@ -34,5 +35,12 @@ class MainVC: UIViewController {
     func setupRx(){
         provider = RxMoyaProvider<API>()
         
+        tableView.rx
+            .itemSelected
+            .subscribe({_ in 
+                if self.searchBar.isFirstResponder == true {
+                    self.view.endEditing(true)
+                }
+            }).addDisposableTo(disposeBag)
     }
 }
