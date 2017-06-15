@@ -18,7 +18,7 @@ struct IssuetrackerViewModel {
     let provider: RxMoyaProvider<API>
     let repoName: Observable<String>
     
-    func trackIssues()-> Observable<[String]> {
+    func trackIssues()-> Observable<[Issue]> {
         return repoName
             .observeOn(MainScheduler.instance)
             .flatMapLatest { name -> Observable<Repo?> in
@@ -30,17 +30,17 @@ struct IssuetrackerViewModel {
                 print("Repository: \(repo.fullName)")
                 return self.findIssues(repo)
             }
-            .replaceNilWith([String]())
+            .replaceNilWith([])
     }
     
-    internal func findIssues(repo: Repo) -> Observable<[Issue]?> {
+    internal func findIssues(_ repo: Repo) -> Observable<[Issue]?> {
         return self.provider
             .request(API.issues(repositoryFullName: repo.fullName))
             .debug()
             .mapArrayOptional(type: Issue.self)
     }
     
-    internal func findRepo(name: String)-> Observable<Repo?> {
+    internal func findRepo(_ name: String)-> Observable<Repo?> {
         return self.provider
             .request(API.repo(fullname: name))
             .debug()

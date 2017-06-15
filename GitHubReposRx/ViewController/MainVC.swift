@@ -19,6 +19,8 @@ class MainVC: UIViewController {
     
     let disposeBag = DisposeBag()
     var provider: RxMoyaProvider<API>!
+    var issueTrackerVM: IssuetrackerViewModel!
+    
     var latestReposName: Observable<String> {
         return searchBar.rx
             .text
@@ -34,6 +36,15 @@ class MainVC: UIViewController {
     
     func setupRx(){
         provider = RxMoyaProvider<API>()
+        
+        issueTrackerVM = IssuetrackerViewModel(provider: provider, repoName: latestReposName)
+        
+        issueTrackerVM.trackIssues()
+            .bind(to: tableView.rx.items) { tableView, row, item in
+                let cell = tableView.dequeueReusableCell(withIdentifier: "issueCell", for: IndexPath(item: row, section: 0))
+                return cell
+        }
+        .addDisposableTo(disposeBag)
         
         tableView.rx
             .itemSelected
