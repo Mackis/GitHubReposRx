@@ -42,6 +42,7 @@ class MainVC: UIViewController {
         issueTrackerVM.trackIssues()
             .bind(to: tableView.rx.items) { tableView, row, item in
                 let cell = tableView.dequeueReusableCell(withIdentifier: "issueCell", for: IndexPath(item: row, section: 0))
+                cell.textLabel?.text = item.title
                 return cell
         }
         .addDisposableTo(disposeBag)
